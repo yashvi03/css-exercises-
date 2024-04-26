@@ -5,9 +5,18 @@ body, html {
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+    "header header header header"
+    "sidebar nav nav nav"
+    "sidebar article article article"
+    "footer footer footer footer";
   height: 100%;
   padding: 16px;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  gap: 12px;
 }
 
 .container div {
@@ -20,28 +29,33 @@ body, html {
 }
 
 .header {
+  grid-area: header;
   background-color: #FFDE22;
 }
 
 .sidebar {
+  grid-area: sidebar;
   background-color: #FF7755;
 }
 
 .nav {
+  grid-area: nav;
   background-color: #00DDFF;
 }
 
 .article {
+  grid-area: article;
   background-color: #bccbde;
 }
 
 .article p {
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: white;
   text-align: left;
 }
 
 .footer {
+  grid-area: footer;
   background-color: #393f4d;
 }
